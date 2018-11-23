@@ -9,8 +9,10 @@ app.use(bodyParser.json())
 app.use(cors())
 
 const posts = require('./routes/api/posts')
+const allroute = require('./routes/api/allroute')
 
 app.use('/api/posts', posts)
+app.use('/', allroute)
 
 const prot = process.env.PORT || 5000
 
